@@ -109,16 +109,33 @@ Launch a more complex world using:
 $ roslaunch husky_gazebo husky_playpen.launch
 ```
 
-Start RViz which allows you to send inputs
+In another terminal start RViz which allows you to send inputs
 ```
 $ roslaunch husky_viz view_robot.launch
 ```
 
-Make sure you check the navigation check box as shown below:
+Make sure you check the navigation check box in RVIZ as shown below:
 
 ![A robot in an empty simulation](images/checkbox.png)
 
-Start the move_base demo
+In another terminal start the move_base demo 
 ```
 $ roslaunch husky_navigation move_base_mapless_demo.launch
 ```
+
+To enter commands first selected the 2D Nav Goal tool, from the toolbar as shown below:
+
+![2D Nav Goal tool in the toolbar](images/2dnav)
+
+Click on the map and move the mouse in the direction of the orintation you want the robot to end in as shown below:
+
+![Selecting a navigation](images/arrow.png)
+
+Let go of the mouse and the robot will create a path to that goal and navigate itself towards it:
+
+![Calculated path being displayed](images/pathgen.png)
+
+Finally you can watch the robot move in the simulation and in RViz:
+
+![Robot following a path](images/final.png)
+
